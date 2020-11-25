@@ -16,7 +16,7 @@ function elasticsearchPut(){
     let model="integrated";
     let y,m,d1,d2,h1,h2;
     y="2020";
-    m="10";
+    m="11";
     h1=0;
     h2=1;
     let value1_name="temp";
@@ -36,7 +36,7 @@ function elasticsearchPut(){
     let dif3=(value3_max-value3_min)/24;
     let data = {
     };
-    for(d=1;d<32;d++)
+    for(d=1;d<26;d++)
     {
         d1=parseInt(d/10);
         d2=d%10;
@@ -171,7 +171,7 @@ function elasticsearchPut(){
             }
             data["name"]=name;
             data["model"]=model;
-            data["date"]=y+"-"+m+"-"+d1+d2+"T"+h1+h2+":00:00.000Z";
+            data["date"]=y+"-"+m+"-"+d1+d2+"T"+h1+h2+":00:00.000+09:00";
             data["loc1"]="00";
             data["loc2"]="00";
             if(value1_name!=null)
